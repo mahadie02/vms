@@ -369,7 +369,7 @@ start_vm() {
             qemu-system-x86_64
             -m "$MEMORY"
             -smp "$CPUS"
-            -cpu host
+            -cpu qemu64
             -drive "file=$IMG_FILE,format=qcow2,if=virtio"
             -drive "file=$SEED_FILE,format=raw,if=virtio"
             -boot order=c
