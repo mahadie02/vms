@@ -364,10 +364,9 @@ start_vm() {
             setup_vm_image
         fi
         
-        # Base QEMU command
+        # Base QEMU command  #-enable-kvm
         local qemu_cmd=(
             qemu-system-x86_64
-            #-enable-kvm
             -m "$MEMORY"
             -smp "$CPUS"
             -cpu host
